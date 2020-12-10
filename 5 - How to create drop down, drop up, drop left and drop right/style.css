@@ -1,0 +1,71 @@
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    width: 992px;
+}
+
+.btn{
+    padding: 0.5rem 1.5rem;
+    border: none;
+    outline: none;
+    background-color: #0f81fb;
+    color: #f3f3f3;
+    border-radius: 3px;
+}
+
+.btn.active{
+    box-shadow: 0 0 0 0.125rem rgba(13, 128, 250, 0.5);
+}
+
+.drop-wrapper{
+    position: relative;
+}
+
+.drop-menu{
+    display: none;
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 3px 0 #ccc;
+}
+
+.drop-menu.active{
+    display: block;
+}
+
+.dropdown{
+    top: 100%;
+    margin-top: 0.125rem;
+}
+
+.dropup{
+    bottom: 100%;
+    margin-bottom: 0.125rem;
+}
+
+
+.dropleft{
+    right: 100%;
+    top: 0%;
+    margin-right: 0.125rem;
+}
+
+.dropright{
+    left: 100%;
+    top: 0%;
+    margin-left: 0.125rem;
+}
+
+.drop-menu a{
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #343434;
+}
