@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Modal</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn" data-target="#modal1">Open Modal</button>
+      <button class="btn" data-target="#modal2">Open Modal 2</button>
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, impedit
+        ex? Neque in animi explicabo magni tempora. Autem voluptatum blanditiis
+        reiciendis fuga obcaecati. Saepe quibusdam corporis consequuntur iste
+        omnis natus?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+        debitis molestias placeat dignissimos facilis voluptatibus eaque autem,
+        ipsam ratione explicabo, deserunt ea aspernatur et quasi voluptatum
+        dolor, labore harum! Rem nulla, architecto ab dicta omnis error nesciunt
+        qui explicabo a maxime similique placeat autem tempora temporibus
+        obcaecati repellendus, earum ad.
+      </p>
+    </div>
+
+    <div class="modal" id="modal1">
+      <div class="header">
+        <div class="title">First Modal</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere ea
+        officia consectetur. Laborum, dolor? Assumenda quo corrupti eveniet
+        velit fugit fugiat odit, dolorum labore obcaecati quia. Commodi
+        assumenda sed maxime!
+      </div>
+    </div>
+    <div class="modal" id="modal2">
+      <div class="header">
+        <div class="title">Second Modal</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere ea
+        officia consectetur. Laborum, dolor? Assumenda quo corrupti eveniet
+        velit fugit fugiat odit, dolorum labore obcaecati quia. Commodi
+        assumenda sed maxime!
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
