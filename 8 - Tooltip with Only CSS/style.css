@@ -1,0 +1,109 @@
+:root {
+  --arrow-width: 5px;
+  --color-tooltip: #343434;
+  --offset: 1px;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 450px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tooltip {
+  position: relative;
+  border-bottom: 1px dashed darkgray;
+  cursor: pointer;
+}
+
+.tooltip:before {
+  visibility: hidden;
+  content: attr(title);
+  background-color: var(--color-tooltip);
+  color: #f3f3f3;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+
+  position: absolute;
+
+  white-space: nowrap;
+  /* opacity: 0.7; */
+}
+
+.tooltip:after {
+  visibility: hidden;
+
+  content: "";
+  position: absolute;
+
+  width: 0;
+  height: 0;
+  border: var(--arrow-width) solid transparent;
+}
+
+.tooltip.top:before {
+  bottom: calc(100% + var(--arrow-width) + var(--offset));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.top:after {
+  bottom: calc(100% + var(--offset));
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-width: 0;
+  border-top-color: var(--color-tooltip);
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+  visibility: visible;
+}
+
+.tooltip.bottom:before {
+  top: calc(100% + var(--arrow-width) + var(--offset));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.bottom:after {
+  top: calc(100% +var(--offset));
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-width: 0;
+  border-bottom-color: var(--color-tooltip);
+}
+
+.tooltip[data-position="left"]:before {
+  right: calc(100% + var(--arrow-width) + var(--offset));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip[data-position="left"]:after {
+  right: calc(100% +var(--offset));
+  top: 50%;
+  transform: translateY(-50%);
+  border-right-width: 0;
+  border-left-color: var(--color-tooltip);
+}
+.tooltip.right:before {
+  left: calc(100% + var(--arrow-width) + var(--offset));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip.right:after {
+  left: calc(100% +var(--offset));
+  top: 50%;
+  transform: translateY(-50%);
+  border-left-width: 0;
+  border-right-color: var(--color-tooltip);
+}
