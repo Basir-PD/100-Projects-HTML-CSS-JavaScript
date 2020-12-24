@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="todos" id="todos">
+      <li class="todo">Task 1</li>
+      <li class="todo active">Task 24/22/20</li>
+      <li>
+        <div class="toggler">Task 3</div>
+        <ul class="toggler-target">
+          <li class="todo">Task 1</li>
+          <li class="todo">Task 2</li>
+          <li>
+            <div class="toggler">Task 3</div>
+            <ul class="toggler-target">
+              <li class="todo">Task 1</li>
+              <li class="todo">Task 2</li>
+              <li>
+                <div class="toggler">Task 3</div>
+                <ul class="toggler-target">
+                  <li class="todo">Task 1</li>
+                  <li class="todo">Task 2</li>
+                  <li class="todo">Task 3</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="todo">Task 4</li>
+    </ul>
+    <script src="script.js" defer></script>
+  </body>
+</html>

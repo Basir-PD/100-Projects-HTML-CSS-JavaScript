@@ -1,0 +1,48 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  padding: 5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.todos {
+  cursor: pointer;
+}
+
+.todo::before {
+  content: "\2610";
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.todo.active {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo.active::before {
+  content: "\2611";
+}
+
+/* toggler */
+.toggler::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggler.active::before {
+  transform: rotate(90deg);
+}
+
+.toggler-target {
+  display: none;
+}
+
+.toggler-target.active {
+  display: block;
+}
