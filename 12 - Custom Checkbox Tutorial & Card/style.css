@@ -1,0 +1,90 @@
+body {
+  font-family: "Montserrat", "Poppins";
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: aliceblue;
+}
+
+.switch-container {
+  padding: 4rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  /* box-shadow: offset-x | offset-y | blur-radius | spread radius | color */
+  box-shadow: #86bffb 0px 0px 0px 6px inset,
+    rgb(255, 255, 255) 25px -25px 0px -6px, rgb(176, 216, 175) 25px -25px,
+    rgb(255, 255, 255) 45px -45px 0px -6px, rgb(235, 221, 153) 45px -45px,
+    rgb(255, 255, 255) 65px -65px 0px -6px, rgb(245, 178, 130) 65px -65px,
+    rgb(255, 255, 255) 85px -85px 0px -6px, rgb(255, 161, 161) 85px -85px;
+}
+
+.switch-container h1 {
+  font-size: 3rem;
+  color: #343434;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  user-select: none;
+  color: #343434;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  margin: 1.5rem 0;
+}
+
+label .checkbox {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  width: 90px;
+  height: 40px;
+  background-color: #dddcdc;
+  transition-delay: 0.2s;
+  margin-right: 1rem;
+  border-radius: 30px;
+}
+
+.switch::before {
+  position: absolute;
+  content: "";
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  margin: 2px;
+  border-radius: 50%;
+  transform: scale(1.3);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition: margin 0.3s ease-in-out;
+}
+
+.switch:hover::before {
+  box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.12);
+}
+
+.checkbox:checked + .switch {
+  background-color: #69b0fd;
+}
+
+.checkbox:checked + .switch:hover:before {
+  box-shadow: 0 0 0px 3px rgba(69, 153, 250, 0.445);
+}
+
+.checkbox:checked + .switch::before {
+  margin-left: 54px;
+  animation: throwShadow 0.3s ease-in-out;
+}
+
+@keyframes throwShadow {
+  from {
+    box-shadow: 0 0 0px 0px rgb(170, 231, 250);
+  }
+  to {
+    box-shadow: 0 0 3px 3px rgb(101, 208, 241);
+  }
+}
