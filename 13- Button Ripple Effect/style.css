@@ -1,0 +1,47 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  outline: none;
+  border: none;
+}
+
+.btn-ripple {
+  position: relative;
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  color: #f3f3f3;
+  border-radius: 4rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-ripple:hover {
+  box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ripple {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%);
+  animation: rippleEffect 0.3s ease-out;
+  border-radius: 50%;
+}
+
+@keyframes rippleEffect {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
