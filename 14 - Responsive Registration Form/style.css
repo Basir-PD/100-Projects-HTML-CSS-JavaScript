@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap");
+
+:root {
+  --primary-color: #3498db;
+  --primary-color-hover: #4fa5df;
+  --input-height: 55px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/*****************  
+
+    Global Styles
+
+******************/
+h1 {
+  font-weight: 300;
+  color: #343434;
+  margin: 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.flex {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+input[type="checkbox"] {
+  margin-right: 1rem;
+  transform: scale(1.5);
+}
+
+/*****************  
+
+    Colors
+
+******************/
+.gray {
+  color: rgb(124, 124, 124);
+}
+
+.fa-twitter {
+  color: var(--primary-color);
+}
+
+.fa-google {
+  color: #dd4b39;
+}
+
+/*****************  
+
+    buttons
+
+******************/
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+}
+
+.btn-tab {
+  width: 50%;
+  padding: 2rem 1rem;
+  font-size: 1.25rem;
+}
+
+.btn-tab.active {
+  border-top: 3px solid var(--primary-color);
+  background-color: #fff;
+}
+
+.btn-oauth {
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  color: rgb(92, 92, 92);
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.btn-register {
+  width: 100%;
+  height: var(--input-height);
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+.btn-register:hover {
+  background-color: var(--primary-color-hover);
+}
+/*****************  
+
+    Registration Form
+
+******************/
+.registration-form {
+  width: 600px;
+  border: 1px solid #ccc;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.registration-form .header {
+  display: flex;
+}
+
+.registration-form .body {
+  padding: 2rem 1rem;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+.bar {
+  position: relative;
+  margin: 2.5rem 0;
+  border-top: 1px solid #ccc;
+}
+
+.bar::before {
+  content: "or";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -53%);
+  padding: 0 1rem;
+  background-color: #fff;
+}
+
+/*****************  
+
+    input elements
+
+******************/
+
+.input-group {
+  position: relative;
+  margin: 1rem 0;
+  height: var(--input-height);
+}
+
+.input-group .input-elem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 1.5rem;
+  font-size: 1.25rem;
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  padding: 0 0.5rem;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  pointer-events: none;
+}
+
+.input-group .input-elem:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.input-group .input-elem:not(:placeholder-shown) + label {
+  top: 0;
+  background-color: #fff;
+  color: rgb(90, 90, 90);
+}
+
+.input-group .input-elem:focus + label {
+  top: 0;
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+.eye {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  right: 1rem;
+  color: #888;
+  cursor: pointer;
+}
+
+.eye:hover {
+  color: var(--primary-color);
+}
+
+.agreements {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.reg_link {
+  display: inline-block;
+  color: var(--primary-color);
+  margin: 1.5rem 0 0.5rem;
+}
+
+/*****************  
+
+ripple effect
+
+******************/
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: rippleAnimate 0.4s ease-out;
+}
+
+@keyframes rippleAnimate {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/*****************  
+
+responsive design
+
+******************/
+
+@media screen and (max-width: 768px) {
+  .registration-form {
+    width: 340px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .btn-oauth {
+    margin-bottom: 0.5rem;
+  }
+
+  .btn-tab {
+    padding: 1rem;
+  }
+}
