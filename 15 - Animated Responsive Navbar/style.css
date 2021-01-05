@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fafbfd;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-toggler,
+.nav-toggler-label {
+  display: none;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+nav {
+  position: relative;
+  line-height: 60px;
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar .nav-item {
+  margin: 0 0.5rem;
+}
+
+.navbar .nav-link {
+  padding: 0.5rem 0.25rem;
+  color: #888;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #0a0a0a;
+}
+
+#underline {
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  background-color: #333;
+  width: 65px;
+  border-radius: 5px 5px 0 0;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  #underline {
+    display: none;
+  }
+  header {
+    position: relative;
+  }
+  .nav-toggler-label {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: #fafbfd;
+    line-height: 40px;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: 0.3s;
+  }
+
+  .nav-toggler:checked ~ nav {
+    transform: scale(1, 1);
+  }
+
+  .navbar {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar .nav-item {
+    margin: 0;
+  }
+
+  .navbar .nav-link {
+    display: block;
+    padding-left: 1rem;
+    width: 100%;
+  }
+
+  .navbar .nav-link:hover,
+  .navbar .nav-link.active {
+    background-color: #f3f3f3;
+  }
+}
