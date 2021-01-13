@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* global */
+img {
+  width: 100%;
+}
+
+h1 {
+  margin: 0.5rem 0;
+}
+
+/* container and cards */
+.container {
+  position: relative;
+  width: 1000px;
+  height: 400px;
+  overflow: hidden;
+  cursor: grab;
+  /* border-top: 10px solid #f00; */
+}
+
+.cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 300px);
+  grid-gap: 50px;
+  pointer-events: none;
+  /* border-bottom: 10px solid #00f; */
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+}
+
+.card__content {
+  color: #4e4e4e;
+  padding: 1rem;
+}
