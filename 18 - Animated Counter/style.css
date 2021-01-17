@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: #f1f3f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  color: #4e4d4d;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-gap: 1rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 15px rgba(55, 84, 170, 0),
+    inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+}
+
+.card {
+  line-height: 1.7;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+[class*="fa-"] {
+  font-size: 4rem;
+  filter: drop-shadow(0px 10px 15px rgba(55, 84, 170, 0.25));
+}
+
+.number {
+  font-family: "Mitr", "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  font-size: 2rem;
+}
+
+.fa-quora {
+  color: #b92b27;
+}
+
+.fa-facebook {
+  color: #3b5999;
+}
+
+.fa-code {
+  color: #34465d;
+}
+
+.fa-check {
+  color: #27ae60;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 1rem 0;
+  }
+}
