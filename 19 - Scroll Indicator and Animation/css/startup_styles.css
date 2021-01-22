@@ -1,0 +1,161 @@
+:root {
+  --nav-height: 60px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --primary-color: #2c2c2c;
+  --color-body: #f3f3f3;
+  --color-text: #343434;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-body);
+  line-height: 2;
+  /* border: 5px solid red; */
+}
+
+/* global */
+a {
+  text-decoration: none;
+}
+
+p,
+h1 {
+  color: var(--color-text);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.wrapper {
+  /* clamp(min, prefered, max) */
+  width: clamp(320px, 95%, 1200px);
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+}
+
+/* navbar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background-color: var(--primary-color);
+  z-index: 100;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #f3f3f3;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar__link {
+  color: #f3f3f3;
+  padding: 0 1rem;
+}
+
+/* hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - var(--nav-height));
+  margin-top: 60px;
+}
+
+.hero .intro {
+  flex: 1;
+}
+.hero .intro h1 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+.btn-cta {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  border-radius: 3rem;
+  margin-top: 2rem;
+}
+
+.btn-cta:hover {
+  box-shadow: 0 0 0 6px var(--btn-cta-shadow);
+}
+
+.btn-cta:active {
+  transform: scale(0.98);
+}
+
+.hero .image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero .image img {
+  height: 600px;
+  width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-wrapper {
+    padding: 0 1rem;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero .image {
+    display: flex;
+    align-items: center;
+  }
+
+  .hero .intro {
+    padding: 1rem 2rem;
+  }
+
+  .hero .intro h1 {
+    font-size: 3rem;
+  }
+
+  .hero .image img {
+    height: 30vh;
+  }
+}

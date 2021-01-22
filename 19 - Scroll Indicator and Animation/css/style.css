@@ -1,0 +1,48 @@
+/* global */
+img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0.5rem 0;
+}
+
+/* sections */
+section {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.intro,
+.img {
+  flex: 1;
+}
+
+.intro {
+  padding: 2rem;
+}
+
+/* scroll indicator */
+#scroll-indicator {
+  position: fixed;
+  top: 60px;
+  height: 10px;
+  width: 0%;
+  background-color: blue;
+  z-index: 100;
+}
+
+footer {
+  padding: 4rem;
+  background-color: #343434;
+  color: #f3f3f3;
+  font-size: 2rem;
+  text-align: center;
+}
