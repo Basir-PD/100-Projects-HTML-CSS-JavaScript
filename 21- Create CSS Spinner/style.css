@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.spinner {
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  color: #343434;
+  box-shadow: inset -21px 0 0 21px currentColor;
+  clip-path: polygon(
+    0% 0%,
+    0 67%,
+    25% 66%,
+    25% 25%,
+    75% 25%,
+    76% 62%,
+    76% 61%,
+    76% 61%,
+    100% 61%,
+    100% 0%
+  );
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    box-shadow: inset -10px 0 0 10px currentColor;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* clip-path explanation */
+/* img {
+  width: 75%;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+} */
