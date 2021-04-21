@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive Side Menu</title>
+  </head>
+  <body>
+    <header id="header">
+      <i class="fas fa-bars" id="nav-toggler"></i>
+      <div>
+        <i class="fas fa-user-alt"></i>
+        <span>John Doe</span>
+      </div>
+    </header>
+
+    <nav id="nav">
+      <div>
+        <div class="logo">
+          <i class="fab fa-gg-circle"></i>
+          <span>GG Corp</span>
+        </div>
+        <ul class="nav">
+          <li class="nav__item">
+            <a href="#" class="nav__item-link">
+              <i class="fas fa-home"></i>
+              <span>Dashboard <i class="fas fa-angle-down"></i></span>
+            </a>
+            <ul class="d-none">
+              <li>
+                <a href="#" class="sub_link">Link 1</a>
+              </li>
+              <li>
+                <a href="#" class="sub_link">Link 2</a>
+              </li>
+              <li>
+                <a href="#" class="sub_link">Link 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__item-link">
+              <i class="fab fa-bitcoin"></i>
+              <span>Income</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__item-link active">
+              <i class="fas fa-user-alt"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__item-link">
+              <i class="fas fa-cogs"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="#" class="sign-out">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Sign Out</span>
+      </a>
+    </nav>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
