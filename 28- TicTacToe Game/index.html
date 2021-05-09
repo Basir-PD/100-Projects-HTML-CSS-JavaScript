@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>TicTacToe Game</title>
+  </head>
+  <body>
+    <div class="message" id="message">Player 01's Turn</div>
+
+    <div class="tictactoe-game">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+
+    <div class="overlay" id="overlay">
+      <div>
+        <h1>Game Over !!!</h1>
+        <div class="btns-grid">
+          <button class="btn btn-restart" id="btn-restart">
+            <i class="fas fa-sync"></i> Restart
+          </button>
+          <button class="btn btn-quit" id="btn-quit">
+            <i class="fas fa-power-off"></i>
+            Quit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <audio src="./click.mp3" id="click"></audio>
+    <audio src="./gameover.mp3" id="gameover"></audio>
+
+    <!-- Tutorial Link -->
+    <a
+      href="https://youtu.be/Bsmh1P-Vdl0"
+      style="
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: #0a0a0a;
+        background-color: lightskyblue;
+        border-top-left-radius: 0.5rem;
+      "
+      >Tutorial Link</a
+    >
+  </body>
+</html>
