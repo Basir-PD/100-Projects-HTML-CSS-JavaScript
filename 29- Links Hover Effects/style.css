@@ -1,0 +1,420 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #343434;
+  margin: 2rem 0;
+}
+
+/* Hover Effect 1 */
+.hover-effect-1 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.5rem 0;
+}
+
+.hover-effect-1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #434343;
+  transform: translateX(-105%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-effect-1:hover::before {
+  transform: translateX(0);
+}
+
+/* Hover Effect 2 */
+.hover-effect-2 {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 0;
+}
+
+.hover-effect-2::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #434343;
+  transition: width 0.5s ease-in-out;
+}
+
+.hover-effect-2:hover::before {
+  width: 100%;
+}
+
+/* Hover Effect 3 */
+.hover-effect-3 {
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.hover-effect-3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.5s ease-in-out;
+  height: 2px;
+  width: 100%;
+  background-color: #343434;
+}
+
+.hover-effect-3:hover::before {
+  transform: translateX(-50%) scale(1);
+}
+/* Hover Effect 4 */
+.hover-effect-4 {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-effect-4::before {
+  content: attr(data-hover);
+  color: #4caf50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hover-effect-4:hover::before {
+  width: 100%;
+}
+
+/* Hover Effect 5 */
+.hover-effect-5 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.hover-effect-5 span {
+  position: relative;
+  display: inline-block;
+  padding: 14px;
+  margin: 2px;
+  background-color: #fff;
+}
+
+.hover-effect-5::after {
+  content: attr(data-hover);
+  position: absolute;
+  color: #4caf50;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 0.75s ease-in-out;
+}
+
+.hover-effect-5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4caf50;
+  transform: translateX(-103%);
+  transition: transform 0.75s ease-in-out;
+}
+
+.hover-effect-5:hover::before {
+  transform: translateX(0);
+}
+
+.hover-effect-5:hover::after {
+  width: 100%;
+}
+/* Hover Effect 6 */
+.hover-effect-6 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.hover-effect-6 span {
+  position: relative;
+  display: inline-block;
+  padding: 14px;
+  margin: 2px;
+  background-color: #fff;
+}
+
+.hover-effect-6::after {
+  content: attr(data-hover);
+  position: absolute;
+  color: #4caf50;
+  width: 100%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  margin: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: height 0.75s ease-in-out;
+}
+
+.hover-effect-6::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4caf50;
+  transform: translateY(-103%);
+  transition: transform 0.75s ease-in-out;
+}
+
+.hover-effect-6:hover::before {
+  transform: translateY(0);
+}
+
+.hover-effect-6:hover::after {
+  height: 100%;
+}
+
+/* Hover Effect 7 */
+.hover-effect-7 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.5rem 0;
+}
+
+.hover-effect-7::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #434343;
+  transform: translateX(-105%);
+  transition: transform 0.5s ease-in-out;
+}
+.hover-effect-7::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #434343;
+  transform: translateX(105%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-effect-7:hover::after,
+.hover-effect-7:hover::before {
+  transform: translateX(0);
+}
+
+/* Hover Effect 8 */
+.hover-effect-8 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.5rem 0.75rem;
+}
+
+.hover-effect-8 span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0%;
+  width: 2px;
+  background-color: #434343;
+  transition: height 0.5s ease-in-out;
+}
+.hover-effect-8 span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0%;
+  width: 2px;
+  background-color: #434343;
+  transition: height 0.5s ease-in-out;
+}
+
+.hover-effect-8::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #434343;
+  transform: translateX(-105%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-effect-8::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #434343;
+  transform: translateX(105%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-effect-8:hover::after,
+.hover-effect-8:hover::before {
+  transform: translateX(0);
+}
+
+.hover-effect-8:hover span::before,
+.hover-effect-8:hover span::after {
+  height: 100%;
+}
+
+/* Hover Effect 9 */
+.hover-effect-9 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.5rem 0.75rem;
+}
+
+.hover-effect-9 span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 2px;
+  background-color: #434343;
+  transition: height 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+
+.hover-effect-9 span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 0%;
+  width: 2px;
+  background-color: #434343;
+  transition: height 0.5s ease-in-out;
+  transition-delay: 1s;
+}
+
+.hover-effect-9::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #434343;
+  transform: translateX(-105%);
+  transition: transform 0.5s ease-in-out;
+  transition-delay: 1.5s;
+}
+
+.hover-effect-9::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #434343;
+  transform: translateX(105%);
+  transition: transform 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.hover-effect-9:hover::after {
+  transform: translateX(0);
+  transition-delay: 1s;
+}
+
+.hover-effect-9:hover::before {
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+
+.hover-effect-9:hover span::before {
+  height: 100%;
+  transition-delay: 1.5s;
+}
+
+.hover-effect-9:hover span::after {
+  height: 100%;
+  transition-delay: 0.5s;
+}
+
+/* Hover Effect 10 */
+.hover-effect-10 {
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.hover-effect-10::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.5s ease-in-out;
+  height: 2px;
+  width: 100%;
+  background-color: #343434;
+}
+.hover-effect-10::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.5s ease-in-out;
+  height: 2px;
+  width: 100%;
+  background-color: #343434;
+}
+
+.hover-effect-10:hover::before,
+.hover-effect-10:hover::after {
+  transform: translateX(-50%) scale(1);
+}
