@@ -1,0 +1,364 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 186px;
+  height: 77px;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 1;
+  margin: 1rem;
+  transition: 0.5s;
+}
+
+/* Button Effect #1 */
+.btn-effect-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+  background-color: #343434;
+  border-radius: 0.25rem;
+  z-index: -1;
+}
+
+.btn-effect-1:hover {
+  color: #f3f3f3;
+}
+
+.btn-effect-1:hover::before {
+  width: 100%;
+}
+
+/* Button Effect #2 */
+.btn-effect-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+  background-color: #343434;
+  border-radius: 0.25rem;
+  z-index: -2;
+}
+
+.btn-effect-2:hover {
+  color: #f3f3f3;
+}
+
+.btn-effect-2:hover::before {
+  width: 100%;
+}
+
+/* Button Effect #3 */
+.btn-effect-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 0%;
+  transition: height 0.3s ease-in-out;
+  background-color: #343434;
+  border-radius: 0.25rem;
+  z-index: -3;
+}
+
+.btn-effect-3:hover {
+  color: #f3f3f3;
+}
+
+.btn-effect-3:hover::before {
+  height: 100%;
+}
+/* Button Effect #4 */
+.btn-effect-4::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 0%;
+  transition: height 0.3s ease-in-out;
+  background-color: #343434;
+  border-radius: 0.25rem;
+  z-index: -4;
+}
+
+.btn-effect-4:hover {
+  color: #f3f3f3;
+}
+
+.btn-effect-4:hover::before {
+  height: 100%;
+}
+
+/* Button Effect #5 */
+.btn-effect-5 {
+  overflow: hidden;
+}
+
+.btn-effect-5::before,
+.btn-effect-5::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #343434;
+  border-radius: 0.25rem 0.25rem 0 0;
+  z-index: -1;
+  transition: top 0.5s ease-in-out;
+}
+.btn-effect-5::after {
+  top: 100%;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+.btn-effect-5:hover {
+  color: #f3f3f3;
+}
+.btn-effect-5:hover::before {
+  top: 0;
+}
+.btn-effect-5:hover::after {
+  top: 50%;
+}
+
+/* Button effect #6 */
+.btn-effect-6:hover {
+  animation: animateX 0.6s linear infinite;
+}
+
+@keyframes animateX {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Button effect #7 */
+.btn-effect-7:hover {
+  animation: animateY 0.6s linear infinite;
+}
+
+@keyframes animateY {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Button Effect #8 */
+.btn-effect-8:hover {
+  animation: pulse 0.5s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Button Effect #9 */
+.btn-effect-9 {
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 0;
+}
+
+.btn-effect-9 .top-face,
+.btn-effect-9 .front-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-effect-9 .front-face {
+  transform: translateZ(38.5px);
+  background-color: #fff;
+}
+
+.btn-effect-9 .top-face {
+  background-color: #343434;
+  color: #f3f3f3;
+  transform: rotateX(90deg) translateZ(38.5px);
+}
+
+.btn-effect-9:hover {
+  transform: rotateX(-90deg);
+  transition: 0.5s ease-in-out;
+}
+/* Button Effect #10 */
+.btn-effect-10 {
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 0;
+}
+
+.btn-effect-10 .bottom-face,
+.btn-effect-10 .front-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-effect-10 .front-face {
+  transform: translateZ(38.5px);
+  background-color: #fff;
+}
+
+.btn-effect-10 .bottom-face {
+  background-color: #343434;
+  color: #f3f3f3;
+  transform: rotateX(-90deg) translateZ(38.5px);
+}
+
+.btn-effect-10:hover {
+  transform: rotateX(90deg);
+  transition: 0.5s ease-in-out;
+}
+
+/* Button Effect #11 */
+.btn-effect-11:hover {
+  animation: changeBG 2s ease-in-out infinite;
+}
+
+@keyframes changeBG {
+  0% {
+    background-color: #12d8fa;
+  }
+  25% {
+    background-color: turquoise;
+  }
+  50% {
+    background-color: yellowgreen;
+  }
+  75% {
+    background-color: thistle;
+  }
+  100% {
+    background-color: #12d8fa;
+  }
+}
+
+/* Button Effect #12 */
+.btn-effect-12 {
+  background-image: linear-gradient(
+    to right,
+    #1fa2ff 0%,
+    #12d8fa 51%,
+    #1fa2ff 100%
+  );
+  background-size: 200% auto;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-effect-12:hover {
+  background-position: right;
+}
+
+/* Button Effect #13 */
+.btn-effect-13 {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-effect-13::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 4px;
+  background-color: #343434;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.btn-effect-13:hover::before {
+  transform: translateX(-50%) scale(1);
+}
+
+/* Button Effect #14 */
+.btn-effect-14 span {
+  position: relative;
+  transition: 0.5s;
+}
+.btn-effect-14 span i {
+  position: absolute;
+  right: -1.5rem;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.btn-effect-14:hover span {
+  padding-right: 1.5rem;
+}
+
+.btn-effect-14:hover i {
+  right: 0;
+  opacity: 1;
+}
