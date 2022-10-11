@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Cube</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="grid">
+      <label for="front" class="btn">Front</label>
+      <label for="left" class="btn"> Left </label>
+      <label for="right" class="btn"> Right </label>
+      <label for="top" class="btn">Top </label>
+      <label for="bottom" class="btn">Bottom </label>
+      <label for="back" class="btn">Back </label>
+    </div>
+    <input type="radio" name="face" id="front" />
+    <input type="radio" id="left" name="face" />
+    <input type="radio" id="right" name="face" />
+    <input type="radio" id="top" name="face" />
+    <input type="radio" id="bottom" name="face" />
+    <input type="radio" id="back" name="face" />
+
+    <div class="container">
+      <div class="cube">
+        <div class="face front">Front</div>
+        <div class="face back">Back</div>
+        <div class="face top">Top</div>
+        <div class="face right">Right</div>
+        <div class="face left">Left</div>
+        <div class="face bottom">Bottom</div>
+      </div>
+    </div>
+  </body>
+</html>

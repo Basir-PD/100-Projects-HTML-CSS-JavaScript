@@ -1,0 +1,22 @@
+
+<div class="grid">
+    <label for="front" class="btn">Front</label>
+    <label for="left" class="btn"> Left </label>
+    <label for="right" class="btn"> Right </label>
+    <label for="top" class="btn">Top </label>
+    <label for="bottom" class="btn">Bottom </label>
+    <label for="back" class="btn">Back </label>
+</div>
+<input type="radio" name="face" id="front" />
+<input type="radio" id="left" name="face" />
+<input type="radio" id="right" name="face" />
+<input type="radio" id="top" name="face" />
+<input type="radio" id="bottom" name="face" />
+<input type="radio" id="back" name="face" />
+
+
+<!-- styles -->
+border: 1px solid rgba(142, 142, 142, 0.683);
+box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1);
+
+transition: all 0.85s cubic-bezier(1, -0.75, 0.5, 1.2);
